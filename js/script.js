@@ -1,6 +1,6 @@
 const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
-const name = document.getElementById("name");
+const drink = document.getElementById("name");
 const image = document.getElementById("image");
 const instructions = document.getElementById("instructions");
 const ingredients = document.getElementById("ingredients");
@@ -9,24 +9,29 @@ const ingredients = document.getElementById("ingredients");
 function getData(url) {
     fetch(url)
       .then(response => response.json())
-      .then(data => displayData(data));
+      .then(data => displayData(data))
+      .catch(error => console.log(error) + displayError());
   }
 
+function displayError() {
+    document.getElementById("errorSearch").innerHTML = "Sorry, we couldn't find that cocktail";
+}
+
 // function to display the data from the API
-function displayData(cocktail) {
-  const data = cocktail.drinks[0];
-  name.innerHTML = data.strDrink;
-  image.src = data.strDrinkThumb;
-  instructions.innerHTML = data.strInstructions;
+function displayData(data) {
+  const cocktail = data.drinks[0];
+  drink.innerHTML = cocktail.strDrink;
+  image.src = cocktail.strDrinkThumb;
+  instructions.innerHTML = cocktail.strInstructions;
   ingredients.innerHTML = "";
   for (let i = 1; i <= 15; i++) {
-    if (data[`strIngredient${i}`] === null) {
+    if (cocktail[`strIngredient${i}`] === null) {
       break;
     } else { // check if the measure is null too, if it is, then don't display it, only the ingredient
-        if (data[`strMeasure${i}`] === null) {
-            ingredients.innerHTML += `<li>${data[`strIngredient${i}`]}</li>`;
+        if (cocktail[`strMeasure${i}`] === null) {
+            ingredients.innerHTML += `<li>${cocktail[`strIngredient${i}`]}</li>`;
         } else { // if the measure is not null, then display it with the ingredient
-            ingredients.innerHTML += `<li>${data[`strIngredient${i}`]} - ${data[`strMeasure${i}`]}</li>`;
+            ingredients.innerHTML += `<li>${cocktail[`strIngredient${i}`]} - ${cocktail[`strMeasure${i}`]}</li>`;
         }
     }
     }
