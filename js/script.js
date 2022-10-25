@@ -13,6 +13,7 @@ function getData(url) {
       .catch(error => console.log(error) + displayError());
   }
 
+// function to display an error message if the API doesn't return any data
 function displayError() {
     document.getElementById("errorSearch").innerHTML = "Sorry, we couldn't find that cocktail";
 }
@@ -55,4 +56,4 @@ document.getElementById("searchBtn").addEventListener("click", function() {
   });
   
 // run the getData function when the page loads
-getData(url);
+// getData(url);
