@@ -9,33 +9,23 @@
     <title>Cocktails</title>
 </head>
 <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
     <header>
         <h1>TP</h1>
         <nav>
-            <div id="home">Home</div>
-            <div id="random">Random cocktail</div>
-            <div id="navSearch">Look for a cocktail</div>
-            <div id="video">Video</div>
-            <div id="contact">Contact me</div>
+            <button class="navButton" role="button" onclick="window.location.href='index.html';">Home</button>  
+            <button class="navButton" role="button" onclick="window.location.href='sections/random.html';">Random cocktail</button>  
+            <button class="navButton" role="button" onclick="window.location.href='sections/search.html';">Cocktail finder</button>  
+            <button class="navButton" role="button" onclick="window.location.href='sections/video.html';">Video</button>  
+            <button class="navButton" role="button" onclick="window.location.href='sections/contactMe.html';">Contact me</button>  
         </nav>
     </header>
     <main>
-        <div class="bg"></div>
-        <div class="bg bg2"></div>
-        <div class="bg bg3"></div>
-        <button id="randomBtn">Give me a drink!</button>
-        <div id="name"></div>
-        <img id="image" src="" alt="">
-        <div id="instructions"></div>
-        <div id="ingredients"></div>
-        <div class="divSearch">
-            <input type="search" placeholder="Cocktail name" autocomplete="off" id="search" size="15">
-            <button id="searchBtn">Search</button>
-            <label id="errorSearch"></label>
-        </div>
-        <div class="video">
-            <p>If you want to know how to prepare a good cocktail and surprise everyone, you can watch this video</p>
-            <iframe width="880" height="495" src="https://www.youtube.com/embed/b0IuTL3Z-kk" title="How To Mix Every Cocktail | Method Mastery | Epicurious" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br><br><br>
+        <div id="indexDiv">
+            <h2>Web description</h2>
         </div>
         <script src="js/script.js"> </script>
     </main>
