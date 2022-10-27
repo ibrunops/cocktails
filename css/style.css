@@ -196,7 +196,7 @@ form {
 
 .feedback {
   color:rgb(0, 0, 0);
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight:500;
   font-size: 18px;
   border-radius: 5px;
@@ -222,7 +222,7 @@ textarea {
 }
 
 #submit {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   width: 100%;
   background:rgb(204, 102, 102);
   border-radius:5px;
@@ -237,3 +237,11 @@ textarea {
   font-weight:700;
 }
 #submit:hover { background:rgb(204, 73, 73); }
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
