@@ -99,6 +99,7 @@ button:hover {
 
 /* style for the nav button */
 .navButton {
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 200;
   letter-spacing: 1px;
