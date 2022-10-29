@@ -36,6 +36,7 @@ function displayData(data) {
         }
     }
     }
+    document.getElementById("errorSearch").innerHTML = "";
 }
 
 // function for search a cocktail by name
