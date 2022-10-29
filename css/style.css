@@ -238,7 +238,7 @@ textarea {
   font-weight:700;
 }
 
-#submit:hover {
+#submit:hover, #randomBtn:hover, #searchBtn:hover {
   background:rgb(204, 73, 73);
 }
 
