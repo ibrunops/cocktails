@@ -4,8 +4,7 @@
 const form = document.getElementById("form")
 const submitButton = document.getElementById("submit")
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwZe0Y0zXJ7PfeKBu2XYy6btpnzmVnF8JjbNfL-itjrdT3MRBW9JNP5sgAB1cwIZ9hOfA/exec'
-const formStatus = document.getElementById("formStatus")
-formStatus.style.display = "block";
+
 form.addEventListener('submit', e => {
     submitButton.disabled = true
     e.preventDefault()
