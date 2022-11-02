@@ -284,3 +284,22 @@ h2 {
   font-size: 1rem;
   padding: 0;
 }
+
+#formStatus {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: black;
+  max-width: 23rem;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+}
+
+#formStatus:not(:empty) {
+  animation: glow 1s forwards;
+}
+
+@keyframes glow {
+  from {background-color: transparent}
+  to {background-color: #ffe54c;}
+}
