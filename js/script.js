@@ -13,9 +13,17 @@ function getData(url) {
       .catch(error => console.log(error) + displayError());
   }
 
+// function to change the content of a document.getElement...
+function changeContent(docElement , content) {
+    docElement.innerHTML = content;
+}
+
 // function to display an error message if the API doesn't return any data
-function displayError() {
-    document.getElementById("errorSearch").innerHTML = "Sorry, we couldn't find that cocktail";
+const errorSearch = document.getElementById("errorSearch");
+function displayError() {    
+    if (errorSearch) {
+      changeContent(errorSearch, "Sorry, we couldn't find that cocktail");
+    }
 }
 
 // function to display the data from the API
@@ -33,10 +41,12 @@ function displayData(data) {
             ingredients.innerHTML += `<li>${cocktail[`strIngredient${i}`]}</li>`;
         } else { // if the measure is not null, then display it with the ingredient
             ingredients.innerHTML += `<li>${cocktail[`strIngredient${i}`]} - ${cocktail[`strMeasure${i}`]}</li>`;
-        }
-    }
-    }
-    document.getElementById("errorSearch").innerHTML = "";
+          }
+      }
+  }
+  if (errorSearch) { // if the error message is displayed, then remove it
+    changeContent(errorSearch, "");
+  }
 }
 
 // function for search a cocktail by name
@@ -57,13 +67,13 @@ if (search) {
   });
 }
 
-// event listener for the random button
-document.getElementById("randomBtn").addEventListener("click", function() {
+// event listener for the random button (? means ask fisrt if the random button exists)
+document.getElementById("randomBtn")?.addEventListener("click", function() {
     getData(url);
   });
 
-// event listener for the search button
-document.getElementById("searchBtn").addEventListener("click", function() {
+// event listener for the search button (? means ask fisrt if the search button exists)
+document.getElementById("searchBtn")?.addEventListener("click", function() {
     searchCocktailByName();
   });
   

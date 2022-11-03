@@ -292,7 +292,7 @@ h2 {
   max-width: 23rem;
   text-align: center;
   margin: auto;
-  padding: auto;
+  padding: 0.5rem;
 }
 
 #formStatus:not(:empty) {
