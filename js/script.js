@@ -41,9 +41,20 @@ function displayData(data) {
 
 // function for search a cocktail by name
 function searchCocktailByName() {
-  const name = document.getElementById("search").value;
-  const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`;
+  const cocktail = document.getElementById("search").value;
+  const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`;
   getData(url);
+}
+
+// if the user presses enter on the search input, then search the cocktail
+const search = document.getElementById("search");
+if (search) {
+  search.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      document.getElementById("searchBtn").click();
+    }
+  });
 }
 
 // event listener for the random button
