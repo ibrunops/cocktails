@@ -143,27 +143,27 @@ button:hover {
 }
 
 .title-word-1 {
-  --color-1: #DF8453;
-  --color-2: #3D8DAE;
-  --color-3: #E4A9A8;
+  --color-1: #7862D1;
+  --color-2: #FD7E89;
+  --color-3: #FFB8DF;
 }
 
 .title-word-2 {
-  --color-1: #ACCFCB;
-  --color-2: #DF8453;
-  --color-3: #3D8DAE;
+  --color-1: #FAEFA7;
+  --color-2: #7862D1;
+  --color-3: #FD7E89;
 }
 
 .title-word-3 {
-  --color-1: #DF8453;
-  --color-2: #E4A9A8;
-  --color-3: #ACCFCB;
+  --color-1: #FFB8DF;
+  --color-2: #FAEFA7;
+  --color-3: #7862D1;
 }
 
 .title-word-4 {
-  --color-1: #E4A9A8;
-  --color-2: #3D8DAE;
-  --color-3: #DF8453;
+  --color-1: #FD7E89;
+  --color-2: #FFB8DF;
+  --color-3: #FAEFA7;
 }
 
 @keyframes color-animation {
